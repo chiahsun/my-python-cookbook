@@ -54,6 +54,76 @@ max([1, 2, 3, 4, 5], key = lambda x: -x**2 + 4*x)
 
 
 
+
+```python
+import pandas as pd
+# https://www.geeksforgeeks.org/different-ways-to-create-pandas-dataframe/
+data = {'a': [1, 2], 'b': [2, -7], 'c': [4, 2], 'd': [9, -1]}
+X = pd.DataFrame(data = data)
+X
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+      <th>d</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>-7</td>
+      <td>2</td>
+      <td>-1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+# X.loc[1, :]
+min(list(X.columns), key = lambda col: X.loc[1, col])
+```
+
+
+
+
+    'b'
+
+
+
 ### Reference
 
 [wiki arguments of the maxima/minimum](https://en.wikipedia.org/wiki/Arg_max)
