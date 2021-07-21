@@ -67,9 +67,9 @@ for x in a.values():
 
 ```python
 # https://stackoverflow.com/questions/483666/reverse-invert-a-dictionary-mapping
-reverse_mapping = {number: word for word, number in a.items()}
-print(type(reverse_mapping))
-print(reverse_mapping)
+inverse_mapping = {number: word for word, number in a.items()}
+print(type(inverse_mapping))
+print(inverse_mapping)
 ```
 
     <class 'dict'>
@@ -78,16 +78,16 @@ print(reverse_mapping)
 
 
 ```python
-reverse_mapping2 = dict((number, word) for word, number in a.items())
-print(type(reverse_mapping2))
-print(reverse_mapping2)
+inverse_mapping2 = dict((number, word) for word, number in a.items())
+print(type(inverse_mapping2))
+print(inverse_mapping2)
 ```
 
     <class 'dict'>
     {1: 'one', 2: 'two', 3: 'three'}
 
 
-# List
+# Set
 
 
 ```python
@@ -118,16 +118,14 @@ print(s2)
 
 
 ```python
-a = [1, 2, 3, 2, 5, 4, 4, 9, 2]
-for index, x in enumerate(a):
-    if index >= 5:
+a = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5}
+for index, (word, number) in enumerate(a.items()):
+    if index >= 3:
         break
-    print(x)
+    print(word, number)
 ```
 
-    1
-    2
-    3
-    2
-    5
+    one 1
+    two 2
+    three 3
 
