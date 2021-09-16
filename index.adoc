@@ -1,0 +1,18 @@
+= My Python Cookbook
+:doctype: book
+:publication-type: book
+:toc: left
+:toclevels: 3 
+:source-highlighter: highlight.js 
+:source-language: python
+:icons: font
+
+## Sync jupyter notebook with python file for easier version control
+
+[source,text]
+----
+jupytext --set-formats ipynb,py:percent sample.ipynb
+----
+
+* `sample.py` would be created syncing with `sample.ipynb`
+* You can choose just put `sample.py` to version control or both files.
