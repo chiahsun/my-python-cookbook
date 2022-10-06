@@ -14,6 +14,18 @@
 jupyter-notebook
 ----
 
+* Only `.py` in version control matters.
+** `.py` for diff and `.ipynb` is for editing and checking output.
+** `.md` is the output for included in asciidoc for quick reference since asciidoc cannot include `.ipynb` and we want to keep `.py` as raw file without output
+
+---
+
+1. Use `jupyter-notebook` to edit `ipynb`
+2. Use `jupytext` to convert `ipynb` to `.py` for version control
+3. `make convert` to convert `ipynb` to `.md` for view in asciidoc.
+
+https://jupytext.readthedocs.io/en/latest/using-cli.html[Use jupytext CLI]
+
 === Sync jupyter notebook with python file for easier version control
 
 [source,text]
@@ -23,3 +35,15 @@ jupytext --set-formats ipynb,py:percent sample.ipynb
 
 * `sample.py` would be created syncing with `sample.ipynb`
 * You can choose just put `sample.py` to version control or both files.
+
+=== Built-in Functions
+
+link:Enumerate.ipynb[Enumerate.ipynb]
+
+include::Enumerate.md[]
+
+link:Zip.ipynb[Zip.ipynb]
+
+include::Zip.md[]
+
+

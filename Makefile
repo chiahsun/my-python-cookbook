@@ -1,6 +1,17 @@
-.PHONY: build view md
+.PHONY: build view convert
 
-all: build view
+INPUTS=$(wildcard *.ipynb)
+
+OUTPUTS=$(INPUTS:.ipynb=.md)
+
+
+all: convert build view
+
+show:
+	@echo $(INPUTS)
+	@echo $(OUTPUTS)
+
+convert: $(OUTPUTS)
 
 build:
 	asciidoctor -v -t index.adoc
@@ -11,7 +22,8 @@ view:
 %.xml: %.adoc
 	asciidoctor -b docbook $<
 	
-%.md: %.xml
-	pandoc -f docbook -t gfm $< -o $@
+%.md: %.ipynb
+	jupyter nbconvert --to markdown $<
 
-md: index.md 
+sync-one-file:
+	jupytext --set-formats ipynb,py:percent Zip.ipynb

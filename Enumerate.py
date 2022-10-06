@@ -14,18 +14,11 @@
 # ---
 
 # %% [markdown]
-# #### zip
+# #### enumerate
 
 # %%
-a = [1, 2, 3]
-b = ["One", "Two", "Three"]
-print(list(zip(a, b)))
+a = [1, 2, 3, 4]
+print([(idx, val) for idx, val in enumerate(a)])
 
 # %%
-print(*zip(a, b))
-
-# %%
-c, d = zip(*zip(a, b))
-print(c)
-print(d)
-print(list(zip(*zip(a, b))))
+print([*enumerate(a)])
