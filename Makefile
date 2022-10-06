@@ -1,14 +1,16 @@
-.PHONY: build view convert
+.PHONY: create show convert build view
 
-INPUTS=$(wildcard *.ipynb)
+INPUTS=$(wildcard *.py)
+NBS=$(INPUTS:.py=.ipynb)
+OUTPUTS=$(NBS:.ipynb=.md)
 
-OUTPUTS=$(INPUTS:.ipynb=.md)
 
+all: $(NBS) convert build view
 
-all: convert build view
+create:
+	jupytext --set-formats ipynb,py:percent --execute *.py
 
 show:
-	@echo $(INPUTS)
 	@echo $(OUTPUTS)
 
 convert: $(OUTPUTS)
@@ -19,8 +21,8 @@ build:
 view:
 	open index.html
 
-%.xml: %.adoc
-	asciidoctor -b docbook $<
+%.ipynb: %.py
+	jupytext --set-formats ipynb,py:percent --execute $<
 	
 %.md: %.ipynb
 	jupyter nbconvert --to markdown $<

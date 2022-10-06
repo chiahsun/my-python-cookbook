@@ -9,9 +9,11 @@
 
 == Jupyter
 
-[source,text]
+[source,bash]
 ----
-jupyter-notebook
+make create       # Create .ipynb notebook if no .ipynb exists
+jupyter-notebook  # Edit .ipynb and .py would be updated when save if sync used before
+make              # Update .ipynb to .md for included in asciidoc
 ----
 
 * Only `.py` in version control matters.
@@ -25,6 +27,8 @@ jupyter-notebook
 3. `make convert` to convert `ipynb` to `.md` for view in asciidoc.
 
 https://jupytext.readthedocs.io/en/latest/using-cli.html[Use jupytext CLI]
+
+https://jupytext.readthedocs.io/en/latest/faq.html[FAQ for jupytext]
 
 === Sync jupyter notebook with python file for easier version control
 
