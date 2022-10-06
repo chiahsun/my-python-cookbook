@@ -7,7 +7,14 @@
 :source-language: python
 :icons: font
 
-## Sync jupyter notebook with python file for easier version control
+== Jupyter
+
+[source,text]
+----
+jupyter-notebook
+----
+
+=== Sync jupyter notebook with python file for easier version control
 
 [source,text]
 ----
