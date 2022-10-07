@@ -13,17 +13,58 @@
 #     name: python3
 # ---
 
-# %%
-def add_one(d={}):
-    if 1 in d:
-        d[1] += 1
-    else:
-        d[1] = 1
-    return d
-add_one()
+# %% [markdown]
+# #### The Mutable Default Argument Problem
+#
+# [SO](https://stackoverflow.com/questions/1132941/least-astonishment-and-the-mutable-default-argument)
+#
+# [SO](https://stackoverflow.com/questions/10676729/why-does-using-arg-none-fix-pythons-mutable-default-argument-issue)
+#
 
 # %%
-add_one()
+def add_element(e, l=[]):
+    l.append(e)
+    return l
+a = []
+add_element(1, a)
 
 # %%
-add_one()
+add_element(2, a)
+
+# %%
+a
+
+# %%
+b = []
+add_element(1, b)
+
+# %%
+add_element(1)
+
+# %%
+add_element(2)
+
+
+# %% [markdown]
+# ##### Solution
+
+# %%
+def add_element(e, l=None):
+    if l is None:
+        l = []
+    l.append(e)
+    return l
+a = []
+add_element(1, a)
+
+# %%
+add_element(2, a)
+
+# %%
+a
+
+# %%
+add_element(1)
+
+# %%
+add_element(2)
