@@ -1,14 +1,13 @@
-.PHONY: create show convert build view
+.PHONY: create show convert build view clean
 
 INPUTS=$(wildcard *.py)
 NBS=$(INPUTS:.py=.ipynb)
 OUTPUTS=$(NBS:.ipynb=.md)
 
 
-all: $(NBS) convert build view
+all: create convert build view
 
-create:
-	jupytext --set-formats ipynb,py:percent --execute *.py
+create: $(NBS)
 
 show:
 	@echo $(OUTPUTS)
@@ -21,11 +20,12 @@ build:
 view:
 	open index.html
 
+clean:
+	rm *.md *.ipynb
+
 %.ipynb: %.py
 	jupytext --set-formats ipynb,py:percent --execute $<
 	
 %.md: %.ipynb
 	jupyter nbconvert --to markdown $<
 
-sync-one-file:
-	jupytext --set-formats ipynb,py:percent Zip.ipynb

@@ -11,34 +11,40 @@
 
 [source,bash]
 ----
-make create       # Create .ipynb notebook if no .ipynb exists
-jupyter-notebook  # Edit .ipynb and .py would be updated when save if sync used before
-make              # Update .ipynb to .md for included in asciidoc
+make              # Create .ipynb notebook if no .ipynb exists
+jupyter-notebook  # Edit .ipynb and .py would be updated automatically
+make              # Update .ipynb to .md to be included in asciidoc
+make clean        # Remove generated .ipynb and .md
 ----
 
-* Only `.py` in version control matters.
+* You only need to include `.py` in version control.
 ** `.py` for diff and `.ipynb` is for editing and checking output.
-** `.md` is the output for included in asciidoc for quick reference since asciidoc cannot include `.ipynb` and we want to keep `.py` as raw file without output
+** `.md` is the output to be included in asciidoc for quick reference since asciidoc cannot include `.ipynb` and we want to keep `.py` as raw file without output
 
----
-
-1. Use `jupyter-notebook` to edit `ipynb`
-2. Use `jupytext` to convert `ipynb` to `.py` for version control
-3. `make convert` to convert `ipynb` to `.md` for view in asciidoc.
+* In `Makefile`
+. Use `jupytext` to generate `ipynb` from `.py` and sync change from `ipynb` back to `.py` for version control
+. Use `jupyter nbconvert` to convert `ipynb` to `.md` for asciidoc inclusion.
 
 https://jupytext.readthedocs.io/en/latest/using-cli.html[Use jupytext CLI]
 
 https://jupytext.readthedocs.io/en/latest/faq.html[FAQ for jupytext]
 
-=== Sync jupyter notebook with python file for easier version control
+=== Add a New Jupyter Notebook
 
-[source,text]
-----
-jupytext --set-formats ipynb,py:percent sample.ipynb
-----
+For example, you created a `Sample.ipynb` and finished editing it.
 
-* `sample.py` would be created syncing with `sample.ipynb`
-* You can choose just put `sample.py` to version control or both files.
+Under command line,
+
+[source,bash]
+-----
+jupytext --set-formats ipynb,py:percent Sample.ipynb
+-----
+
+. Save the `Sample.ipynb` and `Sample.py` would be created automatically and since  `Sample.ipynb` would also be updated, you may consider to save `Sample.ipynb` again.
+
+. Use `make` to create `Sample.md`.
+
+. Make sure that `Sample.py` contains all updated content in `Sample.ipynb` and then `make clean` to remove both `Sample.ipynb` and `Sample.md` since we only need to version control `.py` files.
 
 === Built-in Functions
 
@@ -50,4 +56,10 @@ link:Zip.ipynb[Zip.ipynb]
 
 include::Zip.md[]
 
+== Functions
 
+=== Default Arguments
+
+link:DefaultArgument.ipynb[DefaultArgument.ipynb]
+
+include::DefaultArgument.md[]
