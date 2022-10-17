@@ -15,9 +15,35 @@
 
 # %% [markdown]
 # # List
+# ## Add Element to List
+
+# %%
+a = [0, 1, 2]
+a.append(3)
+a
+
+# %%
+a.extend([4, 5])
+a
+
+# %% [markdown]
+# ## Get Position of the Element
+
+# %%
+a.index(5)
+
+# %% [markdown]
 # ## List Comprehension
 
 # %%
 print([a ** 2 for a in range(10) if a % 3 == 0])
 
+# %% [markdown]
+# ## Arg Max or Arg Min
+
 # %%
+b = [23, 7, 44, 2]
+print(b.index(max(b)))
+
+# %%
+print(b.index(min(b)))
