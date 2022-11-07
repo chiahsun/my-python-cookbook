@@ -56,6 +56,10 @@ link:Zip.ipynb[Zip.ipynb]
 
 include::Zip.md[]
 
+link:Sort.ipynb[Sort.ipynb]
+
+include::Sort.md[]
+
 == Functions
 
 === Default Arguments
