@@ -46,6 +46,12 @@ jupytext --set-formats ipynb,py:percent --sync Sample.ipynb
 
 . Make sure that `Sample.py` contains all updated content in `Sample.ipynb` and then `make clean` to remove both `Sample.ipynb` and `Sample.md` since we only need to keep `Sample.py` in version control.
 
+== String
+
+link:String.ipynb[String.ipynb]
+
+include::String.md[]
+
 == Built-in Functions
 
 link:Enumerate.ipynb[Enumerate.ipynb]
