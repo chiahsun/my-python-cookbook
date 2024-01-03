@@ -8,7 +8,9 @@
 :source-language: python
 :icons: font
 
-include::1-string/1-string.adoc[]
+include::installation/installation.adoc[]
+
+include::string/string.adoc[]
 
 == Built-in Functions
 
