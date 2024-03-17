@@ -1,6 +1,6 @@
 
-== Dictionary
-=== Constructor
+=== Dictionary
+==== Constructor
 
 [source,python]
 ----
@@ -12,7 +12,7 @@ include::constructor.py[]
 include::constructor.py.log[]
 ----
 
-=== Iteration
+==== Iteration
 
 [source,python]
 ----
@@ -24,7 +24,7 @@ include::iteration.py[]
 include::iteration.py.log[]
 ----
 
-=== Dictionary comprehension
+==== Dictionary comprehension
 
 [source,python]
 ----
@@ -36,7 +36,7 @@ include::comprehension.py[]
 include::comprehension.py.log[]
 ----
 
-=== Reverse a mapping
+==== Reverse a mapping
 
 https://stackoverflow.com/questions/483666/reverse-invert-a-dictionary-mapping[SO]
 
@@ -50,7 +50,7 @@ include::reverse.py[]
 include::reverse.py.log[]
 ----
 
-=== Increment a value in a dictionary
+==== Increment a value in a dictionary
 
 
 [source,python]

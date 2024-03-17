@@ -1,8 +1,8 @@
 
 
-== String
+=== String
 
-=== Reverse a String
+==== Reverse a String
 
 https://stackoverflow.com/questions/931092/how-do-i-reverse-a-string-in-python[SO]
 

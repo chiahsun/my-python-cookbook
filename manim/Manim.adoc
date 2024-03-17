@@ -1,0 +1,4 @@
+
+== Manim
+
+include::Installation.adoc[]

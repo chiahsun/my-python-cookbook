@@ -1,0 +1,9 @@
+
+
+== Python 3
+
+include::installation/installation.adoc[]
+
+include::string/string.adoc[]
+
+include::dictionary/dictionary.adoc[]

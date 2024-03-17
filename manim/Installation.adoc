@@ -1,0 +1,25 @@
+
+
+=== https://docs.manim.community/en/stable/installation/macos.html[Installation]
+
+[source,shell]
+----
+brew install py3cairo ffmpeg
+brew install pango pkg-config scipy # For apple-silicon
+pip3 install manim
+----
+
+[source,shell]
+----
+brew install --cask mactex-no-gui
+----
+
+or, install a subset as https://www.tug.org/mactex/morepackages.html[BasicTex]
+
+https://stackoverflow.com/questions/7446187/no-module-named-pkg-resources[SO: No module named pkg resources]
+
+[source,shell]
+----
+$ pip3 install setuptools
+----
+

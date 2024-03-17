@@ -8,11 +8,7 @@
 :source-language: python
 :icons: font
 
-include::installation/installation.adoc[]
-
-include::string/string.adoc[]
-
-include::dictionary/dictionary.adoc[]
+include::python3/Python3.adoc[]
 
 == Built-in Functions
 
@@ -31,6 +27,8 @@ include::dictionary/dictionary.adoc[]
 == Functions
 
 === Default Arguments
+
+include::manim/Manim.adoc[]
 
 // link:DefaultArgument.ipynb[DefaultArgument.ipynb]
 

@@ -1,7 +1,7 @@
 
-== Installation
+=== Installation
 
-=== https://github.com/pyenv/pyenv[pyenv]
+==== https://github.com/pyenv/pyenv[pyenv]
 
 1. Install `pyenv`
 +
