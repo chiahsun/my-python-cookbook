@@ -16,6 +16,12 @@ brew install --cask mactex-no-gui
 
 or, install a subset as https://www.tug.org/mactex/morepackages.html[BasicTex]
 
+[NOTE]
+====
+MacTex is recommended since some formula cannot be rendered if you only have BasicTex installed.
+====
+
+
 https://stackoverflow.com/questions/7446187/no-module-named-pkg-resources[SO: No module named pkg resources]
 
 [source,shell]

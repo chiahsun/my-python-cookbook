@@ -1,0 +1,6 @@
+
+=== https://docs.manim.community/en/stable/tutorials/building_blocks.html[Building Blocks]
+
+Mobject, Animation, Scene
+
+https://numpy.org/doc/stable/reference/generated/numpy.roll.html[np.roll]

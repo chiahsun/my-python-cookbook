@@ -2,3 +2,5 @@
 == Manim
 
 include::Installation.adoc[]
+
+include::building-blocks/BuildingBlocks.adoc[]
