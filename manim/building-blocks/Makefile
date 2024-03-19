@@ -11,3 +11,6 @@ all:
 	manim -pql counting.py CountingScene
 	manim -pql transform.py ExampleTransform
 	manim -pql rotation.py ExampleRotation
+
+clean:
+	rm -rf __pycache__ media
